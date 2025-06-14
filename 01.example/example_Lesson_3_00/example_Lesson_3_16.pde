@@ -1,0 +1,12 @@
+//size(480,120);
+//noFill();
+//beginShape();
+//vertex(15,15);
+//vertex(165,15);
+//vertex(165,45);
+//vertex(315,45);
+//vertex(315,75);
+//vertex(465,75);
+//vertex(465,105);
+//vertex(15,105);
+//endShape();

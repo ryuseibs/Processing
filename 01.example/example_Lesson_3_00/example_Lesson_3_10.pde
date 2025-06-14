@@ -1,0 +1,12 @@
+//size(480,120);
+//strokeWeight(1);
+//ellipse(75,65,70,70);
+//strokeWeight(2);
+//ellipse(153,65,70,70);
+//strokeWeight(4);
+//ellipse(233,65,70,70);
+//strokeWeight(8);
+//ellipse(315,65,70,70);
+//strokeWeight(12);
+//ellipse(400,65,70,70);
+//strokeWeightは枠の太さ
