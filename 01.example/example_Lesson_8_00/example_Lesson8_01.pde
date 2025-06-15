@@ -1,39 +1,39 @@
-Ball b1;
+//Ball b1;
 
-void setup() {
-  size(480, 120);
-  noStroke();
-  b1 = new Ball(20, 240, 60, 255, 4);
-}
+//void setup() {
+//  size(480, 120);
+//  noStroke();
+//  b1 = new Ball(20, 240, 60, 255, 4);
+//}
 
-void draw() {
-  background(128);
-  b1.update();
-}
+//void draw() {
+//  background(128);
+//  b1.update();
+//}
 
-class Ball {
-  float radi, posx, posy, speedx;
-  color clr;
+//class Ball {
+//  float radi, posx, posy, speedx;
+//  color clr;
 
-  Ball(float r, float x, float y, color c, float sx) {
-    radi = r;
-    posx = x;
-    posy = y;
-    clr  = c;
-    speedx = sx;
-  }
+//  Ball(float r, float x, float y, color c, float sx) {
+//    radi = r;
+//    posx = x;
+//    posy = y;
+//    clr  = c;
+//    speedx = sx;
+//  }
 
-  void update() {
-    posx += speedx;
-    if (posx + radi > width) {
-      speedx = -speedx;
-      posx = width - radi;
-    }
-    if (posx - radi < 0) {
-      speedx = -speedx;
-      posx = radi;
-    }
-    fill(clr);
-    ellipse(posx, posy, radi * 2, radi * 2);
-  }
-}
+//  void update() {
+//    posx += speedx;
+//    if (posx + radi > width) {
+//      speedx = -speedx;
+//      posx = width - radi;
+//    }
+//    if (posx - radi < 0) {
+//      speedx = -speedx;
+//      posx = radi;
+//    }
+//    fill(clr);
+//    ellipse(posx, posy, radi * 2, radi * 2);
+//  }
+//}
