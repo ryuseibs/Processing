@@ -1,0 +1,20 @@
+void setup() {
+  size(480, 300);
+  background(255);
+  strokeWeight(2);
+  noLoop();
+}
+
+void draw() {
+  for (int y = 0; y <= height; y = y + 10) {
+    for (int x = 0; x <= width; x = x + 10) {
+      point(x, y);
+    }
+  }
+}
+
+void keyPressed() {
+  if (key == 'p') {
+    saveFrame("0304a_####.png");
+  }
+}
