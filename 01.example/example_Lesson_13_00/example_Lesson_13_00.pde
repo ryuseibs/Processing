@@ -1,7 +1,27 @@
+//void setup() {
+//  size(480, 300);
+//  background(255);
+//  noFill();
+//}
+
+//void draw() {
+//  float x = random(width);
+//  float y = random(height);
+//  ellipse(x, y, 100, 100);
+//}
+
+//void keyPressed() {
+//  if (key =='p') {
+//  saveFrame("0701a_####.png");
+//  }
+//}
+
+//練習問題１３−１
 void setup() {
   size(480, 300);
   background(255);
-  noFill();
+  fill(0, 10);
+  noStroke();
 }
 
 void draw() {
@@ -12,6 +32,6 @@ void draw() {
 
 void keyPressed() {
   if (key =='p') {
-  saveFrame("0701a_####.png");
+    saveFrame("0701a_####.png");
   }
 }
