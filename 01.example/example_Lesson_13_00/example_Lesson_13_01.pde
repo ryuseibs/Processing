@@ -16,7 +16,7 @@
 //}
 
 //void keyPressed() {
-//  if (key =='p') {
+//  if (key == 'p') {
 //    saveFrame("0702a_####.png");
 //  }
 //}
