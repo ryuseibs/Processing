@@ -20,6 +20,8 @@ class ParticleVec2 {
   PVector max;
   //パーティクルの半径
   float radius;
+  //重力定数
+  float G;
 
   //コンストラクタ
   ParticleVec2() {
@@ -36,6 +38,8 @@ class ParticleVec2 {
     //稼働範囲を判定
     min = new PVector(0.0, 0.0);
     max = new PVector(width, height);
+    //重力定数を1.0
+    G = 1.0;
   }
 
   //運動方程式から位置更新
@@ -98,5 +102,23 @@ class ParticleVec2 {
     force.div(mass);
     //力を加速度を加える
     acceleration.add(force);
+  }
+
+  //引力を計算
+  void attract(PVector center, float _mass, float min, float max) {
+    //1:距離計算
+    float distance = PVector.dist(center, location);
+    //2:距離指定した範囲に収める
+    distance = constrain(distance, min, max);
+    //3:引力の強さを算出
+    float strengh = G * (mass * _mass) / (distance * distance);
+    //4:引力の中心点とパーティクル間のベクトルを作成
+    PVector force = PVector.sub(center, location);
+    //5:ベクトルを正規化
+    force.normalize();
+    //6:ベクトルに知kらの強さを乗算
+    force.mult(strengh);
+    //7:力を加える
+    addForce(force);
   }
 }
