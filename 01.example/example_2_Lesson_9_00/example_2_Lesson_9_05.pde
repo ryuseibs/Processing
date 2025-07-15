@@ -3,7 +3,7 @@
 //void setup() {
 //  size(800, 800);
 //  img = loadImage("image_2000x2000.jpg");
-//  //フィルタ：ガウスぼかし
+//  //画像をウィンドウの大きさにリサイズ
 //  img.resize(width, height);
 //}
 
