@@ -12,6 +12,7 @@ void setup() {
   size(800, 600);
   noStroke();
   in = new AudioIn(this, 0);
+  in.start();
   fft = new FFT(this, bands);
   fft.input(in);
 }
