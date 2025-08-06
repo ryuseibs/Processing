@@ -1,6 +1,9 @@
 //角度初期化
 float angle = 0;
 
+//動画録画スイッチ
+boolean record =false;
+
 void setup() {
   size(510, 960);
 }
@@ -38,4 +41,16 @@ void draw() {
 
   //角度を少しずつ増やす
   angle += 0.01;
+
+  if (record == true) {
+    saveFrame("frames/####.tif");
+  }
+}
+
+void keyPressed() {
+  if (key == 's') {
+    record = true;
+  } else if (key == 'c') {
+    record = false;
+  }
 }
