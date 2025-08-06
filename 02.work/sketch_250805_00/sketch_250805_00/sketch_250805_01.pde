@@ -7,13 +7,13 @@ void setup() {
 
 void draw() {
   background(255);
-  noFill();
 
   //円単位の半径
   float r = 50;
 
   for (int x = 0; x <= width; x += 55) {
     for (int y = 0; y <= height; y += 55) {
+      fill(random(230, 255), random(230, 255), random(230, 255));
       ellipse(x, y, r, r);
     }
   }
