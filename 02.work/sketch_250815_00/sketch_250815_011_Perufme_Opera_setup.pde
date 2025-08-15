@@ -1,7 +1,8 @@
 //複数の文字列を使用するため、配列宣言する
 String[] messages = new String[52];
 float x = 0;
-float spacing;
+//複数の文字列の幅の計測を行うため、配列宣言する
+float[] spacing = new float[52];
 
 void setup() {
   size(720, 1080);
@@ -61,4 +62,8 @@ void setup() {
   messages[49] = "3-16. Future Pop";
   messages[50] = "3-17. Let Me Know";
   messages[51] = "3-18. Nananananairo";
+  //文字の幅を計測して間隔設定
+  for (int i = 0; i < messages.length; i++) {
+  spacing[i] = textWidth(messages[i]);
+  }
 }
