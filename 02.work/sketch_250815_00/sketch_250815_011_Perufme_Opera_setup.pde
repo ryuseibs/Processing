@@ -1,14 +1,15 @@
 //複数の文字列を使用するため、配列宣言する
 String[] messages = new String[52];
 float x = 0;
+float y = 0;
 //複数の文字列の幅の計測を行うため、配列宣言する
 float[] spacing = new float[52];
 
 void setup() {
-  size(720, 1080);
-  textSize(14);
+  size(1080, 720);
+  textSize(32);
   fill(0);
-  textAlign(LEFT);
+  textAlign(CENTER);
   
   //各配列ごとに各文字列を導入
   messages[0] = "1-01. Challenger";
