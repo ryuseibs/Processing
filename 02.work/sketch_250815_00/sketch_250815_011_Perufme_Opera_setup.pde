@@ -9,6 +9,7 @@ void setup() {
   textSize(14);
   fill(0);
   textAlign(LEFT);
+  
   //各配列ごとに各文字列を導入
   messages[0] = "1-01. Challenger";
   messages[1] = "1-02. Linear Motor Girl";
@@ -62,6 +63,7 @@ void setup() {
   messages[49] = "3-16. Future Pop";
   messages[50] = "3-17. Let Me Know";
   messages[51] = "3-18. Nananananairo";
+  
   //文字の幅を計測して間隔設定
   for (int i = 0; i < messages.length; i++) {
   spacing[i] = textWidth(messages[i]);
