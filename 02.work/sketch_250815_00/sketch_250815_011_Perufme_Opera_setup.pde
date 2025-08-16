@@ -1,16 +1,18 @@
 //複数の文字列を使用するため、配列宣言する
 String[] messages = new String[52];
-float x = 0;
-float y = 0;
+float[] x = new float[52]; // 各行のx座標を管理する配列
+int currentIndex = 0;
 //複数の文字列の幅の計測を行うため、配列宣言する
 float[] spacing = new float[52];
+// 各行の速度を管理する配列
+float[] speeds = new float[52];
 
 void setup() {
-  size(1080, 720);
+  size(504, 756);
   textSize(32);
-  fill(0);
+  fill(255);
   textAlign(CENTER);
-  
+
   //各配列ごとに各文字列を導入
   messages[0] = "1-01. Challenger";
   messages[1] = "1-02. Linear Motor Girl";
@@ -25,7 +27,7 @@ void setup() {
   messages[10] = "1-11. GAME";
   messages[11] = "1-12. Secret Secret";
   messages[12] = "1-13. love the world";
-  messages[13] = "1-14. edge (⊿-mix)";
+  messages[13] = "1-14. edge";
   messages[14] = "1-15. Dream Fighter";
   messages[15] = "1-16. One Room Disco";
   messages[16] = "2-01. NIGHT FLIGHT";
@@ -64,9 +66,11 @@ void setup() {
   messages[49] = "3-16. Future Pop";
   messages[50] = "3-17. Let Me Know";
   messages[51] = "3-18. Nananananairo";
-  
-  //文字の幅を計測して間隔設定
+
+  // 各配列の初期値を設定
   for (int i = 0; i < messages.length; i++) {
-  spacing[i] = textWidth(messages[i]);
+    spacing[i] = textWidth(messages[i]);
+    x[i] = -spacing[i] * i; // 初期位置をずらして開始
+    speeds[i] = random(5, 8); // 速度をランダムに設定
   }
 }
